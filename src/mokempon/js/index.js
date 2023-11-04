@@ -1,5 +1,8 @@
 let ataqueJugador;
-let ataqueEnemigo; 
+let ataqueEnemigo;
+const agua = 'Agua'
+const fuego = 'Fuego'
+const tierra = 'Tierra'
 
 
 function  iniciarJuego(){
@@ -48,15 +51,15 @@ function seleccionarMascotaEnemigo(){
 
 
 function ataqueFuego(){
-    ataqueJugador = 'Fuego'
+    ataqueJugador = fuego
     ataqueAleatorioEnemigo()
 }
 function ataqueAgua(){
-    ataqueJugador = 'Agua';
+    ataqueJugador = agua;
     ataqueAleatorioEnemigo()
 }
 function ataqueTierra(){
-    ataqueJugador = 'Tierra'
+    ataqueJugador = tierra
     ataqueAleatorioEnemigo()
 }
 
@@ -64,23 +67,39 @@ function ataqueAleatorioEnemigo(){
     let ataqueAleatorio = aleatorio(1,3)
 
     if (ataqueAleatorio == 1) {
-        ataqueEnemigo = 'fuego'
+        ataqueEnemigo = fuego
     } else if(ataqueAleatorio == 2){
-        ataqueEnemigo = 'aguas'
+        ataqueEnemigo = agua
     }else{
-        ataqueEnemigo = 'Tierra'
+        ataqueEnemigo = tierra
     }
-    crearMensaje();
+    combate();
 }
 
-function crearMensaje(){
+function combate() {
+    if(ataqueEnemigo === ataqueJugador) {
+        crearMensaje("EMPATE")
+    } else if(ataqueJugador === fuego && ataqueEnemigo === tierra) {
+        crearMensaje("GANASTE")
+    } else if(ataqueJugador === agua && ataqueEnemigo === fuego) {
+        crearMensaje("GANASTE")
+    } else if(ataqueJugador === tierra && ataqueEnemigo === agua) {
+        crearMensaje("GANASTE")
+    } else {
+        crearMensaje("PERDISTE")
+    }
+}
+
+function crearMensaje(resultado){
     let sectionMensajes = document.getElementById('mensajes');
 
     let parrafo = document.createElement('p');
-    parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, las mascota del enemigo atacó con ${ataqueEnemigo} - GANASTE 🎉` 
+    parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, las mascota del enemigo atacó con ${ataqueEnemigo} - ${resultado} ` 
 
     sectionMensajes.appendChild(parrafo);
+
 }
+
 
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
