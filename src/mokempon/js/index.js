@@ -101,13 +101,37 @@ function combate() {
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador;
     }
+
+    //revisar las vidas
+    revisarVidas();
 }
+
+function revisarVidas(){
+    if (vidasEnemigo == 0) {
+        crearMensajeFinal('FELICITACIONES!!! Ganaste 🚀🙌🏽🍻🎉')
+        //setTimeout(location.reload(), 5000)
+    }else if (vidasJugador == 0) {
+        crearMensajeFinal('Perdiste 🙁😿💔')
+        //setTimeout(location.reload(), 5000)
+    }
+}
+
+
 
 function crearMensaje(resultado){
     let sectionMensajes = document.getElementById('mensajes');
 
     let parrafo = document.createElement('p');
     parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, las mascota del enemigo atacó con ${ataqueEnemigo} - ${resultado} ` 
+
+    sectionMensajes.appendChild(parrafo);
+
+}
+function crearMensajeFinal(resultadoFinal){
+    let sectionMensajes = document.getElementById('mensajes');
+
+    let parrafo = document.createElement('p');
+    parrafo.innerHTML = resultadoFinal;
 
     sectionMensajes.appendChild(parrafo);
 
