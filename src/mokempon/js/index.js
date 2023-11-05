@@ -1,5 +1,7 @@
 let ataqueJugador;
 let ataqueEnemigo;
+let vidasJugador = 3;
+let vidasEnemigo = 3;
 const agua = 'Agua'
 const fuego = 'Fuego'
 const tierra = 'Tierra'
@@ -77,16 +79,27 @@ function ataqueAleatorioEnemigo(){
 }
 
 function combate() {
+    let spanVidasJugador = document.getElementById('vidas-jugador');
+    let spanVidasEnemigo = document.getElementById('vidas-enemigo');
+
     if(ataqueEnemigo === ataqueJugador) {
         crearMensaje("EMPATE")
     } else if(ataqueJugador === fuego && ataqueEnemigo === tierra) {
-        crearMensaje("GANASTE")
+        crearMensaje("GANASTE");
+        vidasEnemigo--;
+        spanVidasEnemigo.textContent = vidasEnemigo;
     } else if(ataqueJugador === agua && ataqueEnemigo === fuego) {
-        crearMensaje("GANASTE")
+        crearMensaje("GANASTE");
+        vidasEnemigo--;
+        spanVidasEnemigo.textContent = vidasEnemigo;
     } else if(ataqueJugador === tierra && ataqueEnemigo === agua) {
-        crearMensaje("GANASTE")
+        crearMensaje("GANASTE");
+        vidasEnemigo--;
+        spanVidasEnemigo.textContent = vidasEnemigo;
     } else {
         crearMensaje("PERDISTE")
+        vidasJugador--
+        spanVidasJugador.innerHTML = vidasJugador;
     }
 }
 
