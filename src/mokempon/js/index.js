@@ -8,8 +8,15 @@ const tierra = 'Tierra'
 
 
 function  iniciarJuego(){
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'none';
+
+    let sectionReiniciar = document.getElementById('reiniciar');
+    sectionReiniciar.style.display = 'none';
+
     let botonMascotaJugador = document.getElementById('boton-mascota');
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador);
+
 
     let botonFuego = document.getElementById('boton-fuego');
     botonFuego.addEventListener('click', ataqueFuego);
@@ -27,6 +34,11 @@ function seleccionarMascotaJugador(){
     let inputCapipepo = document.getElementById('capipepo');
     let inputRatigueya = document.getElementById('ratigueya');
     let spanMascotaJugador = document.getElementById('mascota-jugador')
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'block';
+    let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
+    sectionSeleccionarMascota.style.display = 'none';
+
 
     let escogerMascotaJugador = (inputHipodoge.checked) ? 
         spanMascotaJugador.innerHTML = 'Hipodoge'
@@ -35,6 +47,9 @@ function seleccionarMascotaJugador(){
     : (inputRatigueya.checked) ? 
         spanMascotaJugador.innerHTML = 'Ratigueya'
     : alert('elige una mascota');
+
+    let botonMascotaJugador = document.getElementById('boton-mascota')
+    botonMascotaJugador.disabled = true;
 
     seleccionarMascotaEnemigo();
 };
@@ -82,6 +97,7 @@ function ataqueAleatorioEnemigo(){
 }
 
 function combate() {
+    // Combate entre jugador y enemigo || HACER QUE los botones se desactiven si no se ha escojido un pokemon
     let spanVidasJugador = document.getElementById('vidas-jugador');
     let spanVidasEnemigo = document.getElementById('vidas-enemigo');
 
@@ -130,6 +146,7 @@ function crearMensaje(resultado){
     sectionMensajes.appendChild(parrafo);
 
 }
+
 function crearMensajeFinal(resultadoFinal){
     let sectionMensajes = document.getElementById('mensajes');
 
@@ -144,10 +161,13 @@ function crearMensajeFinal(resultadoFinal){
     botonAgua.disabled = true;
     let botonTierra = document.getElementById('boton-tierra');
     botonTierra.disabled = true;
+
+    let sectionReiniciar = document.getElementById('reiniciar');
+    sectionReiniciar.style.display = 'block';
 }
 
 
-function botonReiniciar(){
+function reiniciarJuego(){
     location.reload();
 }
 
