@@ -22,11 +22,27 @@ body{
 
 .container-seleccionar-mascota{
     width: 50%;
+    height: auto;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(163, 137, 137, 0.5);
+    margin-bottom: 5px;
+}
+
+
+.container-seleccionar-mascota_details{
+    width: 50%;
+    height: auto;
+    border-radius: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
 }
 
 .titulo{
@@ -71,4 +87,9 @@ input{
 .container-botones-tarjetas{
     display: flex;
     gap: 3px;
+}
+
+#GraficoDetails{
+    width: 310px;
+    height: 100%;
 }
