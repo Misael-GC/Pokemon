@@ -14,6 +14,7 @@
   </head>
   <body>
     <section id="seleccionar-mascota">
+        <!-- other -->
       <div class="container-seleccionar-mascota">
         <h1 class="titulo">POKEMON</h1>
 
@@ -25,7 +26,7 @@
                  <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="Hipodoge"/>
             </label> -->
           <label class="tarjeta-de-mokepon" for="hipodoge">
-            <p>Hipodoge</p>
+            <p id="NamePokemon">Hipodoge</p>
             <img
               src=""
               alt="Name-pokemon"
@@ -62,8 +63,26 @@
                 <i class="fa-solid fa-forward-fast"></i>
             </button>
         </div>
+      </div>
+
+
+        <!-- other -->
+      <div class="container-seleccionar-mascota_details">
+
+        <h2 class="subtitulo">Nùmeros de tu pokemon</h2>
+
+        <div class="tarjetas">
+            <canvas id="GraficoDetails" width="310px" height="150px"></canvas>
+          
+
+          <input type="radio" name="mascota" id="hipodoge" />
+
+
+
+        </div>
          
       </div>
+
     </section>
 
     <section id="seleccionar-ataque">
@@ -90,7 +109,7 @@
     <section id="reiniciar">
       <button id="boton-reiniciar">Reiniciar</button>
     </section>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./domElements.js"></script>
   </body>
 </html>

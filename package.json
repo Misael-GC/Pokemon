@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Misael-GC/Pokemon/issues"
   },
-  "homepage": "https://github.com/Misael-GC/Pokemon#readme"
+  "homepage": "https://github.com/Misael-GC/Pokemon#readme",
+  "dependencies": {
+    "chart.js": "^4.4.0"
+  }
 }
