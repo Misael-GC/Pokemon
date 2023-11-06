@@ -9,6 +9,7 @@ let pokeDef;
 let pokeSpeed;
 let pokeSpDef;
 let pokeSpAtck;
+let myChart; //definir la variable para el gráfico que se va a destruir
 
 //https://platzi.com/clases/3102-portafolio-web-2022/50516-arreglando-los-bugs-de-wordle-sesion-11-6-de-junio/
 //MINUTO 45
@@ -100,16 +101,7 @@ const nextPokemon = () =>{
 
  console.log('vivo')
 
-// ...
+// // ...
 
-// Definir una función para generar el gráfico inicial
-const generateInitialChart = (value = 1) => {
-    const initialPokemonID = value;
-    printPokemon(initialPokemonID);
-  };
-  
-  // Llamar a la función para generar el gráfico inicial al cargar la página
-  generateInitialChart();
-  
 
 printPokemon(1)
