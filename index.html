@@ -5,41 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="./index.js "></script>
+    <!-- <script src="./domElements.js"></script> -->
     <link rel="stylesheet" href="./style.css" />
-
+    <script src="https://kit.fontawesome.com/a3356dc614.js" crossorigin="anonymous"></script>
     <!-- <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
     </style> -->
   </head>
   <body>
     <section id="seleccionar-mascota">
-        <div class="container-seleccionar-mascota">
-            <h1 class="titulo">POKEMON</h1>
+      <div class="container-seleccionar-mascota">
+        <h1 class="titulo">POKEMON</h1>
 
-            <h2 class="subtitulo">Elige tu mascota:</h2>
+        <h2 class="subtitulo">Elige tu mascota:</h2>
 
-            <div class="tarjetas">
-
-              <label class="tarjeta-de-mokepon" for="hipodoge">
+        <div class="tarjetas">
+          <!-- <label class="tarjeta-de-mokepon" for="hipodoge">
                  <p>Hipodoge</p>
                  <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="Hipodoge"/>
-            </label>
-              <input type="radio" name="mascota" id="hipodoge" />
-      
-              <label class="tarjeta-de-mokepon" for="capipepo">
-                <p>Capipepo</p>
-                <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="Capipepo" srcset="">
-            </label>
-              <input type="radio" name="mascota" id="capipepo" />
-      
-              <label class="tarjeta-de-mokepon" for="ratigueya">
-                <p>Ratigueya</p>
-                <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt="Ratigueya" srcset="">
-            </label>
-              <input type="radio" name="mascota" id="ratigueya" />
-            </div>
-            <button id="boton-mascota">Seleccionar</button>
+            </label> -->
+          <label class="tarjeta-de-mokepon" for="hipodoge">
+            <p>Hipodoge</p>
+            <img
+              src=""
+              alt="Name-pokemon"
+              id="poke-img"
+              class="poke-img"
+            >
+          </label>
+
+          <input type="radio" name="mascota" id="hipodoge" />
+
+        
+          <!-- <input type="radio" name="mascota" id="capipepo" /> -->
+
+          <!-- <label class="tarjeta-de-mokepon" for="ratigueya">
+            <p>Ratigueya</p>
+            <img
+              src="./assets/mokepons_mokepon_ratigueya_attack.png"
+              alt="Ratigueya"
+              srcset=""
+            />
+          </label>
+          <input type="radio" name="mascota" id="ratigueya" /> -->
+
+
         </div>
+        <div class="container-botones-tarjetas">
+            <button class="pokedex-button" onclick="prevPokemon()">
+                <i class="fa-solid fa-backward-fast"></i>
+             </button>
+    
+            <button id="boton-mascota">Seleccionar</button>
+    
+            <button class="pokedex-button" onclick="nextPokemon()">
+                <i class="fa-solid fa-forward-fast"></i>
+            </button>
+        </div>
+         
+      </div>
     </section>
 
     <section id="seleccionar-ataque">
@@ -66,5 +90,7 @@
     <section id="reiniciar">
       <button id="boton-reiniciar">Reiniciar</button>
     </section>
+
+    <script src="./domElements.js"></script>
   </body>
 </html>
