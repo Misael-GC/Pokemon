@@ -90,7 +90,17 @@ const fetchData = (API) => {
                         data:[ pokeAtaque, pokeDef, pokeSpAtck, pokeSpDef, pokeSpeed, pokeHp ]
                     }
                 ]
-            }
+            },
+            options: {
+              plugins: {
+                  legend: {
+                      display: true,
+                      labels: {
+                          color: 'rgb(255, 255,255)'
+                      }
+                  }
+              }
+          }
          });
          return data;
      })

@@ -1,9 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
 
 body{
     font-family: 'Fredoka One', cursive;
-    background: #000000;
+    font-family: 'Poppins', sans-serif;
+    background-color: #041562;
     color: white;
 
 }
@@ -18,7 +19,7 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
-    height: 100vh;
+    height: 140vh;
 }
 
 .container-seleccionar-mascota{
@@ -29,7 +30,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(163, 137, 137, 0.5);
+    background-color: rgba(137, 159, 163, 0.5);
     margin-bottom: 5px;
 }
 
@@ -42,18 +43,18 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(17, 195, 226, 0.5);
     margin-bottom: 5px;
 }
 
 .titulo{
-    color: rgba(31, 29, 29, 0.5);
+    color: white;
     font-size: 32px;
 
 }
 
 .subtitulo{
-    color: rgba(31, 29, 29, 0.5);
+    color: white
     font-size: 20px;
 }
 
@@ -90,7 +91,43 @@ input{
     gap: 3px;
 }
 
+#boton-mascota{
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 25px 0px;
+}
+
+.pokedex-button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 25px 0px;
+}
+
+#boton-mascota:hover{
+    background-color: white;
+    color: #041562;
+}
+.pokedex-button:hover{
+    background-color: white;
+    color: #041562;
+}
+
 #GraficoDetails{
     width: 310px;
     height: 100%;
+    color: white;
+    font-size:xx-large;
+    background-color: rgba(31, 29, 29, 0.5);
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
