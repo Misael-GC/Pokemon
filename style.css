@@ -100,6 +100,10 @@ input{
     margin: 25px 0px;
 }
 
+#boton-mascota:hover{
+    background-color: white;
+    color: #041562;
+}
 /* #GraficoDetails{
     width: 310px;
     height: 100%;
