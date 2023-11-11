@@ -6,16 +6,22 @@ let pokeAtaqueName;
 let pokeAtaque;
 let pokeDefName;
 let pokeDef;
-let pokeSpeed;
-let pokeSpDef;
+let pokeSpAtckName;
 let pokeSpAtck;
+let pokeSpDefName;
+let pokeSpDef;
+let pokeSpeedName;
+let pokeSpeed;
+let pokeHpName;
+let pokeHp;
 let myChart; //definir la variable para el gráfico que se va a destruir
+import BASE_API from "./api.mjs";
 
 //https://platzi.com/clases/3102-portafolio-web-2022/50516-arreglando-los-bugs-de-wordle-sesion-11-6-de-junio/
 //MINUTO 45
 
 //llamar la API
-const BASE_API = 'https://pokeapi.co/api/v2';
+
 const pokemon_API = `${BASE_API}/pokemon`;
 
 let currentPokemon;
@@ -45,7 +51,7 @@ const fetchData = (API) => {
         pokeImg.src = currentPokemon.sprites.other["official-artwork"].front_default;
         pokeName.textContent = currentPokemon.name;
          //console.log(data.sprites.other["official-artwork"].front_default)
-         //Nombre y puntaje del daño
+
          pokeAtaqueName = currentPokemon.stats[1].stat.name;
          pokeAtaque = currentPokemon.stats[1].base_stat;
 
@@ -53,22 +59,36 @@ const fetchData = (API) => {
          pokeDef = currentPokemon.stats[2].base_stat;
          console.log(pokeAtaqueName)
 
+         pokeSpAtckName = currentPokemon.stats[3].stat.name;
+         pokeSpAtck = currentPokemon.stats[3].base_stat;
+
+         pokeSpDefName = currentPokemon.stats[4].stat.name;
+         pokeSpDef = currentPokemon.stats[4].base_stat;
+
+         pokeSpeedName = currentPokemon.stats[5].stat.name;
+         pokeSpeed = currentPokemon.stats[5].base_stat;
+
+         pokeHpName=currentPokemon.stats[0].stat.name;
+         pokeHp = currentPokemon.stats[0].base_stat;
+
         //Grafico
          window.myChart = new Chart(canvasGraphicDetail,{
             type: "polarArea",
             data:{
-                labels:[pokeAtaqueName, pokeDefName, "vida"],
+                labels:[pokeAtaqueName, pokeDefName, pokeSpAtckName, pokeSpDefName, pokeSpeedName, pokeHpName],
                 datasets:[
                     {
                         label: "Detalles",
                         backgroundColor: [
                             '#d40005',
                             'rgb(54, 162, 235)',
-                            '#B3B6B7',
                             '#000000',
+                            '#B3B6B7',
+                            '#D0E325',
+                            '#94E325',
                           ],
                         
-                        data:[ pokeAtaque, pokeDef, pokeSpeed]
+                        data:[ pokeAtaque, pokeDef, pokeSpAtck, pokeSpDef, pokeSpeed, pokeHp ]
                     }
                 ]
             }
