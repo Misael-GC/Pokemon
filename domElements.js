@@ -15,13 +15,14 @@ let pokeSpeed;
 let pokeHpName;
 let pokeHp;
 let myChart; //definir la variable para el gráfico que se va a destruir
-import BASE_API from "./api.mjs";
+
+
 
 //https://platzi.com/clases/3102-portafolio-web-2022/50516-arreglando-los-bugs-de-wordle-sesion-11-6-de-junio/
 //MINUTO 45
 
 //llamar la API
-
+const BASE_API = 'https://pokeapi.co/api/v2';
 const pokemon_API = `${BASE_API}/pokemon`;
 
 let currentPokemon;
@@ -34,7 +35,6 @@ const fetchData = (API) => {
 
 //Describir el pokemon toma la API y un nodo
 
-
  const printPokemon = (pokemon) => {
      fetchData(`${pokemon_API}/${pokemon}`)
      .then(data =>{
@@ -45,7 +45,7 @@ const fetchData = (API) => {
       }
 
         currentPokemon = data;
-        console.log(currentPokemon)
+        // console.log(currentPokemon)
 
         //nombre e imagen del pokemon
         pokeImg.src = currentPokemon.sprites.other["official-artwork"].front_default;
@@ -57,7 +57,6 @@ const fetchData = (API) => {
 
          pokeDefName = currentPokemon.stats[2].stat.name;
          pokeDef = currentPokemon.stats[2].base_stat;
-         console.log(pokeAtaqueName)
 
          pokeSpAtckName = currentPokemon.stats[3].stat.name;
          pokeSpAtck = currentPokemon.stats[3].base_stat;
@@ -119,9 +118,6 @@ const nextPokemon = () =>{
   printPokemon(currentPokemon.id);
 }
 
- console.log('vivo')
-
-// // ...
-
 
 printPokemon(1)
+

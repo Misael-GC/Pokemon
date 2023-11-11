@@ -7,6 +7,7 @@ const fuego = 'Fuego'
 const tierra = 'Tierra'
 
 
+
 function  iniciarJuego(){
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
     sectionSeleccionarAtaque.style.display = 'none';
