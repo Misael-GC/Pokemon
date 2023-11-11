@@ -131,3 +131,32 @@ input{
     margin-bottom: 20px;
     border-radius: 20px;
 }
+
+#boton-mascota:hover{
+    background-color: white;
+    color: #041562;
+}
+
+#seleccionar-ataque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(https://pbs.twimg.com/media/F-NCZ7ibAAATutS?format=jpg&name=small); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center center; */
+    /* width: 100%; */
+    /* height: 100vh; */
+}
+
+.boton-de-ataque{
+    background-color: #11468f;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 100px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
