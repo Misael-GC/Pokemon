@@ -35,7 +35,7 @@ function seleccionarMascotaJugador(){
     let inputRatigueya = document.getElementById('ratigueya');
     let spanMascotaJugador = document.getElementById('mascota-jugador')
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
-    sectionSeleccionarAtaque.style.display = 'block';
+    sectionSeleccionarAtaque.style.display = 'flex';
     let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
     sectionSeleccionarMascota.style.display = 'none';
 
