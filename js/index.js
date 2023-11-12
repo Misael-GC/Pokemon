@@ -2,11 +2,9 @@ let ataqueJugador;
 let ataqueEnemigo;
 let vidasJugador = 3;
 let vidasEnemigo = 3;
-const agua = 'Agua'
-const fuego = 'Fuego'
-const tierra = 'Tierra'
-
-
+const agua = 'Agua';
+const fuego = 'Fuego';
+const tierra = 'Tierra';
 
 function  iniciarJuego(){
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
@@ -172,6 +170,17 @@ function crearMensajeFinal(resultadoFinal){
     let sectionReiniciar = document.getElementById('reiniciar');
     sectionReiniciar.style.display = 'block';
 }
+
+//mostrar el pokemon en la pantalla
+// function muestraMascotaJugador(){
+//     mokemones.forEach((mokemones) =>{
+//         if(nombreMascotaJugador == mokemones.nombre){
+//             document.getElementById("imagen-mascota-ataque-jugador").innerHTML= <img class="image-macota-ataque" src="${mokemon.image}" alt="${mokemon.nombre}"/>;
+//             imagenMascotaAtaqueJugadorNombre.innerHTML = ${mokemon.nombre};
+//         }
+//     })
+//     //al igual que colocar el nombre pero colocas la imagen
+// }
 
 
 function reiniciarJuego(){
