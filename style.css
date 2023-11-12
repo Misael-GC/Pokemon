@@ -178,3 +178,11 @@ input{
     font-family: 'Poppins', sans-serif;
     background-color: transparent;
 }
+
+.ataques{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    gap: 10px;
+    justify-items: center
+}
+
