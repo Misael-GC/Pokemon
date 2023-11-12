@@ -127,7 +127,7 @@ function combate() {
 
 function revisarVidas(){
     if (vidasEnemigo == 0) {
-        crearMensajeFinal('FELICITACIONES!!! Ganaste 🚀🙌🏽🍻🎉')
+        crearMensajeFinal('FELICITACIONES!!! Ganaste 🚀🙌🏽🎉')
     }else if (vidasJugador == 0) {
         crearMensajeFinal('Perdiste 🙁😿💔')
     }
