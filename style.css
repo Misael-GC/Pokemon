@@ -56,7 +56,7 @@ body{
     font-size: 20px;
 }
 
-.tarjetas{
+.tarjetas, .tarjetas-ataques{
     display: flex;
     gap: 10px;
 }
@@ -156,9 +156,28 @@ input{
     display: grid;
     grid-template-columns: 100px 100px;
     gap: 10px;
-    justify-items: center
+    /* justify-items: center; */
+    color: white;
 }
 
-.ataques p{
-    /* place-self: center stretch; */
+/* .ataques p{
+    place-self: center stretch;
+} */
+
+#vidas-jugador, #vidas-enemigo {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+
+  .ataques-jugador,
+  .ataques-enemigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+@media (max-width: 360px) {
+    .tarjetas, .tarjetas-ataques{
+        flex-direction: column;
+    }
 }
