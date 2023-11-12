@@ -8,9 +8,6 @@
     <!-- <script src="./domElements.js"></script> -->
     <link rel="stylesheet" href="./style.css" />
     <script src="https://kit.fontawesome.com/a3356dc614.js" crossorigin="anonymous"></script>
-    <!-- <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-    </style> -->
   </head>
   <body>
     <section id="seleccionar-mascota">
@@ -53,35 +50,12 @@
 
         </div>
         <div class="container-botones-tarjetas">
-            <!-- <button class="pokedex-button" onclick="prevPokemon()">
-                <i class="fa-solid fa-backward-fast"></i>
-             </button> -->
     
             <button id="boton-mascota">Seleccionar</button>
-    
-            <!-- <button class="pokedex-button" onclick="nextPokemon()">
-                <i class="fa-solid fa-forward-fast"></i>
-            </button> -->
         </div>
       </div>
 
-
         <!-- other -->
-      <!-- <div class="container-seleccionar-mascota_details">
-
-        <h2 class="subtitulo">Nùmeros de tu pokemon</h2>
-
-        <div class="tarjetas">
-            <canvas id="GraficoDetails" width="310px" height="150px"></canvas>
-          
-
-          <input type="radio" name="mascota" id="hipodoge" />
-
-
-
-        </div>
-         
-      </div> -->
 
     </section>
 
@@ -103,12 +77,18 @@
         </div>
 <!-- other -->
       <div>
-        <div id="ataques-del-jugador"></div>
-        <div id="ataques-del-enemigo"></div>
-        <p>Tu mascota <span id="mascota-jugador"> ? </span> tiene <span id="vidas-jugador">3</span> vidas</p>
-        <p>Las mascota <span id="mascota-enemigo"> ? </span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
-      </div>
+        <div class="ataques">
+          <p id="vidas-jugador">3</p>
+          <p id="mascota-jugador"> ? </p>
+          <div id="ataques-del-jugador"></div>
+        </div>
 
+        <div>
+          <span id="vidas-enemigo">3</span>
+          <p id="mascota-enemigo"></p>
+          <div id="ataques-del-enemigo"></div>
+        </div>
+      </div>
 
     </section>
 
