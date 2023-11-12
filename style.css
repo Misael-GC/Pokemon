@@ -155,22 +155,17 @@ input{
 .ataques{
     display: grid;
     grid-template-columns: 100px 100px;
-    gap: 10px;
-    /* justify-items: center; */
     color: white;
+    /* background-color: blue; */
 }
 
-/* .ataques p{
-    place-self: center stretch;
-} */
 
 #vidas-jugador, #vidas-enemigo {
     font-size: 32px;
     margin-bottom: 0;
   }
 
-  .ataques-jugador,
-  .ataques-enemigo{
+  .ataques-jugador, .ataques-enemigo {
     display: flex;
     flex-direction: column;
     align-items: center;
