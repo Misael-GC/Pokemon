@@ -84,6 +84,9 @@ input{
     display:none
 }
 
+input:checked + label{
+    background-color: #11468f;
+}
 /* .container-botones-tarjetas{
     display: flex;
     gap: 3px;
